@@ -11,7 +11,6 @@ Shader "Custom/RoundShader"
 		Pass
 		{
 			CGPROGRAM
-
 			#pragma exclude_renderers gles
 			#pragma vertex vert
 			#pragma fragment frag
@@ -38,7 +37,6 @@ Shader "Custom/RoundShader"
 			{
 				fixed4 col;
 				col=(0,1,1,0);
-
                 //即上面说的|x|<(0.5-r)或|y|<(0.5-r)
 				if(abs(i.RadiusBuceVU.x)<0.5-_RADIUSBUCE||abs(i.RadiusBuceVU.y)<0.5-_RADIUSBUCE)   
 				{
@@ -59,7 +57,6 @@ Shader "Custom/RoundShader"
 				return col;  
 			}
 			ENDCG
-
 		}
 	}
 }
